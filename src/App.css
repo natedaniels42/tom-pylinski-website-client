@@ -1,38 +1,93 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html {
+  scroll-behavior: smooth;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+nav {
+  background-color: black;
+  position: fixed;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+}
+
+nav a:hover {
+  background-color: white;
+  color: black;
+}
+
+#banner {
+  position: relative;
+  top: 100px;
+  background-color: black;
+  width: 100%;
+  height: 500px;
+  color: white;
+  padding: 20px;
+  font-size: 2.5rem;
+  font-family: 'Playfair Display', serif;
+  margin: 0 auto;
+}
+
+#profile-pic {
+  width: 100%;
+  height: 100%;
+}
+
+#bio {
+  background-color: rgb(153, 117, 63);
+  color: white;
+  padding: 10%;
+}
+
+#bio h2 {
+  font-size: 2rem;
+}
+
+p {
+  letter-spacing: .1rem;
+  line-height: 1.5rem;
+  word-spacing: .3rem;
+}
+
+audio {
+  margin: 5% 0;
+  width: 100%;
+}
+
+#quote {
+  display: flex;
+  background-color: black;
+  color: white;
+  font-size: 1.8rem;
+}
+
+#quote-text {
+  width: 50%;
   display: flex;
   flex-direction: column;
-  align-items: center;
+}
+
+#quote-text p {
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 50px;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#quote-image img {
+  width: 100%;
+  object-fit:scale-down;
 }
