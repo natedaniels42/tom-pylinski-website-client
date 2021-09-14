@@ -9,6 +9,6 @@ export default ({ performances }) => (
     <Switch>
         <Route exact path='/' render={() => <Home performances={performances} />} />
         <Route path='/admin' component={Login} />
-        <Route path='/profile' component={Profile} />
+        <Route path='/profile' render={() => <Profile performances={performances} />}/>
     </Switch>
 )
