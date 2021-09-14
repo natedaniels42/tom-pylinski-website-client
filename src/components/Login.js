@@ -10,6 +10,7 @@ const url = 'http://localhost:4000/api/v1/auth/login';
 const Login = (props) => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [message, setMessage] = useState('');
 
     const setCurrentUser = (token) => {
         localStorage.setItem('token', token);
@@ -38,13 +39,14 @@ const Login = (props) => {
                 props.history.push('/profile');
             })
             .catch((err) => {
-                console.log(err);
-                
+                console.log(err.response);
+                setMessage(err.response.data.message);
             })
     }
 
     return (
         <form onSubmit={handleSubmit}>
+            {message && <p>{message}</p>}
             <label htmlFor="email">Email: </label>
             <input onChange={handleChange} type="text" name="email" value={email} />
             <label htmlFor="password">Password: </label>
