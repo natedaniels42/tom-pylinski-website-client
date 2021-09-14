@@ -45,7 +45,7 @@ const Login = (props) => {
     }
 
     return (
-        <form onSubmit={handleSubmit}>
+        <form id="login-box" onSubmit={handleSubmit}>
             {message && <p>{message}</p>}
             <label htmlFor="email">Email: </label>
             <input onChange={handleChange} type="text" name="email" value={email} />

@@ -28,6 +28,7 @@ nav a {
 nav a:hover {
   background-color: white;
   color: black;
+  opacity: 50%;
 }
 
 #banner {
@@ -92,12 +93,26 @@ audio {
   object-fit:scale-down;
 }
 
-form {
+#profile {
   position: relative;
   top: 100px;
 }
 
-#profile {
+#login-box {
   position: relative;
-  top: 100px;
+  top: 200px;
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  margin: 0 auto;
+  border: 1px solid black;
+  border-radius: 5%;
+  padding: 10px;
+  box-shadow: 2px 2px 5px;
+}
+
+#login-box > * {
+  margin: 2%;
+  padding: 2%;
+  z-index: 10;
 }
