@@ -13,10 +13,10 @@ const Login = (props) => {
     const [message, setMessage] = useState('');
 
     const setCurrentUser = (token) => {
-        localStorage.setItem('token', token);
+        sessionStorage.setItem('token', token);
         setAuthHeader(token);
         const decodedToken = jwt_decode(token);
-        localStorage.setItem('currentUser', decodedToken.id);
+        sessionStorage.setItem('currentUser', decodedToken.id);
     }
 
     const handleChange = (event) => {

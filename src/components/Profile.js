@@ -9,6 +9,7 @@ const Profile = (props) => {
         <div id="profile">
             <h1>This is the Profile Page</h1>
             {performances.length && <Performances performances={performances} />}
+            {!performances.length && <p>No Performances Listed</p>}
         </div>
     )
 }

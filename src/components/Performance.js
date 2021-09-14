@@ -10,6 +10,8 @@ const Performance = (props) => {
             <p>{performance.state}</p>
             <p>{performance.date}</p>
             <p>{performance.time}</p>
+            <button>Update</button>
+            <button>Delete</button>
         </div>
     )
 }
