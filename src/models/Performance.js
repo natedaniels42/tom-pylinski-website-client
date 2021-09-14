@@ -5,6 +5,17 @@ class PerformanceModel {
         return fetch(url)
             .then((response) => response.json())
     }
+
+    static updatePerformance = (performance, id) => {
+        return fetch(`${url}/${id}`, {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(performance)
+        })
+            .then((response) => response.json())
+    }
 }
 
 export default PerformanceModel;

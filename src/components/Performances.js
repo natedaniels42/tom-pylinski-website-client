@@ -3,11 +3,11 @@ import Performance from './Performance';
 
 
 const Performances = (props) => {
-    const { performances } = props;
+    const { performances, admin } = props;
 
     return (
         <div>
-            {performances.map(performance => <Performance performance={performance} />)}
+            {performances.map(performance => <Performance performance={performance} key={performance.id} admin={admin} />)}
         </div>
     )
 }

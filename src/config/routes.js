@@ -7,10 +7,10 @@ import Login from '../components/Login';
 
 export default ({ performances }) => (
     <Switch>
-        <Route exact path='/' render={() => <Home performances={performances} />} />
+        <Route exact path='/' render={() => <Home performances={performances} admin={false}/> } />
         <Route path='/admin' component={Login} />
         <Route path='/profile' render={() => sessionStorage.currentUser 
-            ? <Profile performances={performances} />
+            ? <Profile performances={performances} admin={true}/>
             : <Redirect to='/admin' /> }/>
     </Switch>
 )

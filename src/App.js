@@ -6,7 +6,7 @@ import './App.css';
 
 import Nav from './components/Nav';
 
-function App() {
+const App = () => {
   const [performances, setPerformances] = useState([]);
 
   useEffect(() => {
@@ -15,6 +15,8 @@ function App() {
         setPerformances(result);
       })
   })
+
+  
 
   return (
     <div>
