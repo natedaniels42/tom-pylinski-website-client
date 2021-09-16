@@ -1,16 +1,11 @@
 import React, { useState, useEffect } from 'react';
+import { withRouter } from 'react-router-dom';
 import PerformanceModel from '../models/Performance';
 
 const Performance = (props) => {
-    const { performance, admin } = props;
+    const { performance, admin, history } = props;
     const [inputs, setInputs] = useState({});
     const [update, setUpdate] = useState(false);
-    // const [name, setName] = useState(performance.name);
-    // const [location, setLocation] = useState(performance.location);
-    // const [city, setCity] = useState(performance.city);
-    // const [state, setState] = useState(performance.state);
-    // const [date, setDate] = useState(performance.date);
-    // const [time, setTime] = useState(performance.time);
 
     useEffect(() => {
         setInputs(performance);
@@ -27,7 +22,12 @@ const Performance = (props) => {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        
+        PerformanceModel.updatePerformance(inputs, performance._id)
+            .then((result) => {
+                console.log(result);
+            })
+        setUpdate(false);
+        history.push('/profile');
     }
 
     return (
@@ -42,7 +42,7 @@ const Performance = (props) => {
                 <div>
                     {!update && <button onClick={handleClick}>Update</button>}
                     {update && (
-                        <form>
+                        <form onSubmit={handleSubmit}>
                             <label htmlFor="name">Concert Name:</label>
                             <input name="name" value={inputs.name} onChange={handleInputChange} type="text" />
                             <label htmlFor="location">Location:</label>
@@ -117,4 +117,4 @@ const Performance = (props) => {
     )
 }
 
-export default Performance;
+export default withRouter(Performance);

@@ -14,7 +14,7 @@ const Home = (props) => {
                 <h1>THOMAS E. PYLINSKI, TROMBONE & EUPHONIUM</h1>
             </div>
             <div>
-                <img id="profile-pic" src="tom.png" />
+                <img id="profile-pic" src="tom.png" alt="Tom Pylinski with trombone"/>
             </div>
             <Bio />
             <Audio />
