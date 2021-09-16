@@ -40,13 +40,13 @@ const Performance = (props) => {
     }
 
     return (
-        <div>
-            <p>{performance.name}</p>
-            <p>{performance.location}</p>
-            <p>{performance.city}</p>
-            <p>{performance.state}</p>
-            <p>{performance.date}</p>
-            <p>{performance.time}</p>
+        <tr>
+            <td>{performance.name}</td>
+            <td>{performance.location}</td>
+            <td>{performance.city}</td>
+            <td>{performance.state}</td>
+            <td>{performance.date}</td>
+            <td>{performance.time}</td>
             {admin && (
                 <div>
                     {!update && <button onClick={handleClick}>Update</button>}
@@ -122,7 +122,7 @@ const Performance = (props) => {
                     {!update && <button onClick={handleDelete}>Delete</button>}
                 </div>
             )}
-        </div>
+        </tr>
     )
 }
 

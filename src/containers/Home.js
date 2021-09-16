@@ -18,8 +18,8 @@ const Home = (props) => {
             </div>
             <Bio />
             <Audio />
-            <Quote />
             {performances.length && <Performances performances={performances} />}
+            <Quote />
         </div>
     )
 }

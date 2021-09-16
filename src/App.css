@@ -76,6 +76,17 @@ audio::-webkit-media-controls-enclosure {
   width: 50%;
 }
 
+#audio {
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+#audio > p {
+  margin: 0 auto;
+}
+
 #quote {
   display: flex;
   background-color: black;
@@ -121,4 +132,20 @@ audio::-webkit-media-controls-enclosure {
   margin: 2%;
   padding: 2%;
   z-index: 10;
+}
+
+table {
+  border: 2px solid black;
+  box-shadow: 2px 2px 5px;
+  width: 50%;
+}
+
+td {
+  padding: 2%;
+}
+
+#performances {
+  background-color:rgb(153, 117, 63);
+  color: white;
+  padding-bottom: 10%;
 }
