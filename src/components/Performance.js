@@ -1,24 +1,34 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import PerformanceModel from '../models/Performance';
 
 const Performance = (props) => {
     const { performance, admin } = props;
+    const [inputs, setInputs] = useState({});
     const [update, setUpdate] = useState(false);
-    const [name, setName] = useState(performance.name);
-    const [location, setLocation] = useState(performance.location);
-    const [city, setCity] = useState(performance.city);
-    const [state, setState] = useState(performance.state);
-    const [date, setDate] = useState(performance.date);
-    const [time, setTime] = useState(performance.time);
+    // const [name, setName] = useState(performance.name);
+    // const [location, setLocation] = useState(performance.location);
+    // const [city, setCity] = useState(performance.city);
+    // const [state, setState] = useState(performance.state);
+    // const [date, setDate] = useState(performance.date);
+    // const [time, setTime] = useState(performance.time);
+
+    useEffect(() => {
+        setInputs(performance);
+    }, []);
 
     const handleClick = () => {
         setUpdate(true);
     }
 
-    // const handleSubmit = (event) => {
-    //     event.preventDefault();
-    //     PerformanceModel.updatePerformance
-    // }
+    const handleInputChange = (event) => {
+        event.persist();
+        setInputs(inputs => ({...inputs, [event.target.name]: event.target.value}));
+    }
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        
+    }
 
     return (
         <div>
@@ -34,13 +44,13 @@ const Performance = (props) => {
                     {update && (
                         <form>
                             <label htmlFor="name">Concert Name:</label>
-                            <input name="name" value={name} onChange={event => setName(event.target.value)} type="text" />
+                            <input name="name" value={inputs.name} onChange={handleInputChange} type="text" />
                             <label htmlFor="location">Location:</label>
-                            <input name="location" value={location} onChange={event => setLocation(event.target.value)} type="text" />
+                            <input name="location" value={inputs.location} onChange={handleInputChange} type="text" />
                             <label htmlFor="city">City:</label>
-                            <input name="city" value={city} onChange={event => setCity(event.target.value)} type="text" />
+                            <input name="city" value={inputs.city} onChange={handleInputChange} type="text" />
                             <label htmlFor="state">State:</label>
-                            <select name="state" onChange={event => setState(event.target.value)} value={state} >
+                            <select name="state" onChange={handleInputChange} value={inputs.state} >
                                 <option value="AL">Alabama</option>
                                 <option value="AK">Alaska</option>
                                 <option value="AZ">Arizona</option>
@@ -94,9 +104,9 @@ const Performance = (props) => {
                                 <option value="WY">Wyoming</option>
                             </select>
                             <label htmlFor="date">Date:</label>
-                            <input type="date" value={date} onChange={event => setDate(event.target.value)} name="date" />
+                            <input type="date" onChange={handleInputChange} name="date" />
                             <label htmlFor="time">Time:</label>
-                            <input type="time" value={time} onChange={event => setTime(event.target.value)} name="time" />
+                            <input type="time" onChange={handleInputChange} name="time" />
                             <button type="submit">Update</button>
                         </form>
                     )}
