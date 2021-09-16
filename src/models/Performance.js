@@ -27,6 +27,16 @@ class PerformanceModel {
         })
             .then((response) => response.json())
     }
+
+    static deletePerformance = (performanceId) => {
+        return fetch (`${url}/${performanceId}`, {
+            method: 'DELETE',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+        })
+            .then((response) => response.json())
+    }
 }
 
 export default PerformanceModel;

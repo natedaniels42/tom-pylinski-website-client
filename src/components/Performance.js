@@ -30,6 +30,15 @@ const Performance = (props) => {
         history.push('/profile');
     }
 
+    const handleDelete = (event) => {
+        event.preventDefault();
+        PerformanceModel.deletePerformance(performance._id)
+            .then((result) => {
+                console.log(result);
+            })
+        history.push('/profile');
+    }
+
     return (
         <div>
             <p>{performance.name}</p>
@@ -110,7 +119,7 @@ const Performance = (props) => {
                             <button type="submit">Update</button>
                         </form>
                     )}
-                    {!update && <button>Delete</button>}
+                    {!update && <button onClick={handleDelete}>Delete</button>}
                 </div>
             )}
         </div>
