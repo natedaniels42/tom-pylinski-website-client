@@ -16,6 +16,17 @@ class PerformanceModel {
         })
             .then((response) => response.json())
     }
+
+    static createPerformance = (performance) => {
+        return fetch(url, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(performance)
+        })
+            .then((response) => response.json())
+    }
 }
 
 export default PerformanceModel;
