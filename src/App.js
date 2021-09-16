@@ -8,6 +8,7 @@ import Nav from './components/Nav';
 
 const App = () => {
   const [performances, setPerformances] = useState([]);
+  const [admin, setAdmin] = useState(false);
 
   useEffect(() => {
     PerformanceModel.getAllPerformances()
@@ -22,7 +23,7 @@ const App = () => {
     <div>
       <Nav />
       <main>
-        <Routes performances={performances} />
+        <Routes performances={performances} admin={admin} />
       </main>
     </div>
   );

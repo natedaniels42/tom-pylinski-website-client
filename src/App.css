@@ -17,6 +17,7 @@ nav {
   justify-content: center;
   align-items: center;
   padding: 10px 0;
+  z-index: 1;
 }
 
 nav a {
@@ -68,6 +69,11 @@ p {
 audio {
   margin: 5% 0;
   width: 100%;
+}
+
+audio::-webkit-media-controls-enclosure {
+  background-color:rgb(153, 117, 63);
+  width: 50%;
 }
 
 #quote {
