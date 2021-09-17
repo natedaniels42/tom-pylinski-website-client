@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Bio from '../components/Bio';
 import Audio from '../components/Audio';
 import Quote from '../components/Quote';
@@ -6,15 +6,44 @@ import Performances from '../components/Performances';
 import '../App.css';
 
 const Home = (props) => {
-    const { performances } = props;
+    const pics = ['tom.png', 'tom2.jpeg', 'tom3.jpg'];
     
+    const { performances } = props;
+    const [index, setIndex] = useState(0);
+    const [active, setActive] = useState(true);
+    const [pic, setPic] = useState(pics[0]);
+    
+    
+    
+
+    useEffect(() => {
+        if (active) {
+            const timer = setTimeout(() => {
+                setIndex(prev => (prev + 1) % 3);
+                setPic(pics[index]);
+            }, 5000);
+            return () => {
+                clearTimeout(timer);
+            }
+        }
+    }, [index]);
+
+    const handleClick = (event) => {
+        setActive(false);
+        setIndex(Number(event.target.id[3]));
+        setPic(pics[index]);
+    } 
+
     return (
         <div id="home">
             <div id="banner">
                 <h1>THOMAS E. PYLINSKI, TROMBONE & EUPHONIUM</h1>
             </div>
-            <div>
-                <img id="profile-pic" src="tom.png" alt="Tom Pylinski with trombone"/>
+            <div id="img-container">
+                <img id="profile-pic" src={pic} alt="Tom Pylinski with trombone"/>
+                <div className="img-button" id="tom0" onClick={handleClick}></div>
+                <div className="img-button" id="tom1" onClick={handleClick}></div>
+                <div className="img-button" id="tom2" onClick={handleClick}></div>
             </div>
             <Bio />
             <Audio />

@@ -45,9 +45,43 @@ nav a:hover {
   margin: 0 auto;
 }
 
+#img-container {
+  position: relative;
+  width: 100%;
+  height: 700px;
+}
+
 #profile-pic {
   width: 100%;
   height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.img-button {
+  position: absolute;
+  background-color: white;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.img-button:hover {
+  background-color: blueviolet;
+}
+
+#tom0 {
+  left: 46%;
+}
+
+#tom1 {
+  left: 48%;
+}
+
+#tom2 {
+  left: 50%;
 }
 
 #bio {

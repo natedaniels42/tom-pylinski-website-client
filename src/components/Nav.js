@@ -14,6 +14,9 @@ const Nav = () => {
                 <Link to="/#audio">Recordings</Link>
             </div>
             <div className="nav-items">
+                <Link to="/#performances">Performances</Link>
+            </div>
+            <div className="nav-items">
                 <Link to="/#quote">Quote</Link>
             </div>
             <div className="nav-items">
