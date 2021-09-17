@@ -7,20 +7,15 @@ import '../App.css';
 
 const Home = (props) => {
     const pics = ['tom.png', 'tom2.jpeg', 'tom3.jpg'];
-    
-    const { performances } = props;
-    const [index, setIndex] = useState(0);
-    const [active, setActive] = useState(true);
-    const [pic, setPic] = useState(pics[0]);
-    
-    
-    
 
+    const { performances } = props;
+    const [active, setActive] = useState(true);
+    const [index, setIndex] = useState(0)
+    
     useEffect(() => {
         if (active) {
-            const timer = setTimeout(() => {
+            const timer = setTimeout( () => {
                 setIndex(prev => (prev + 1) % 3);
-                setPic(pics[index]);
             }, 5000);
             return () => {
                 clearTimeout(timer);
@@ -31,7 +26,6 @@ const Home = (props) => {
     const handleClick = (event) => {
         setActive(false);
         setIndex(Number(event.target.id[3]));
-        setPic(pics[index]);
     } 
 
     return (
@@ -40,7 +34,7 @@ const Home = (props) => {
                 <h1>THOMAS E. PYLINSKI, TROMBONE & EUPHONIUM</h1>
             </div>
             <div id="img-container">
-                <img id="profile-pic" src={pic} alt="Tom Pylinski with trombone"/>
+                <img id="profile-pic" src={pics[index]} alt="Tom Pylinski with trombone"/>
                 <div className="img-button" id="tom0" onClick={handleClick}></div>
                 <div className="img-button" id="tom1" onClick={handleClick}></div>
                 <div className="img-button" id="tom2" onClick={handleClick}></div>
