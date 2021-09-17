@@ -41,12 +41,12 @@ const Performance = (props) => {
 
     return (
         <tr>
-            <td>{performance.name}</td>
-            <td>{performance.location}</td>
-            <td>{performance.city}</td>
-            <td>{performance.state}</td>
-            <td>{performance.date}</td>
-            <td>{performance.time}</td>
+            <td className="table-data">{performance.name}</td>
+            <td className="table-data">{performance.location}</td>
+            <td className="table-data">{performance.city}</td>
+            <td className="table-data">{performance.state}</td>
+            <td className="table-data">{performance.date}</td>
+            <td className="table-data">{performance.time}</td>
             {admin && (
                 <div>
                     {!update && <button onClick={handleClick}>Update</button>}

@@ -12,12 +12,12 @@ const Performances = (props) => {
                 <table>
                     <thead>
                         <tr>
-                            <td>Concert Name</td>
-                            <td>Location</td>
-                            <td>City</td>
-                            <td>State</td>
-                            <td>Date</td>
-                            <td>Time</td>
+                            <td className="table-header">Concert Name</td>
+                            <td className="table-header">Location</td>
+                            <td className="table-header">City</td>
+                            <td className="table-header">State</td>
+                            <td className="table-header">Date</td>
+                            <td className="table-header">Time</td>
                         </tr>
                     </thead>
                     <tbody>

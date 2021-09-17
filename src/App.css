@@ -81,10 +81,11 @@ audio::-webkit-media-controls-enclosure {
   color: white;
   display: flex;
   flex-direction: column;
+  padding: 5%;
 }
 
-#audio > p {
-  margin: 0 auto;
+.audio-container {
+  padding-top: 2%;
 }
 
 #quote {
@@ -135,8 +136,6 @@ audio::-webkit-media-controls-enclosure {
 }
 
 table {
-  border: 2px solid black;
-  box-shadow: 2px 2px 5px;
   width: 50%;
 }
 
@@ -148,4 +147,12 @@ td {
   background-color:rgb(153, 117, 63);
   color: white;
   padding-bottom: 10%;
+}
+
+.table-header {
+  font-weight: bolder;
+}
+
+.table-data {
+  font-weight: lighter;
 }
