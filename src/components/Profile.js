@@ -28,6 +28,10 @@ const Profile = (props) => {
         history.push('/profile');
     }
 
+    const handleCancel = (event) => {
+        setAdd(false);
+    }
+
     return (
         <div id="profile">
             <h1>This is the Profile Page</h1>
@@ -103,6 +107,7 @@ const Profile = (props) => {
                     <button type="submit">Add Performance</button>
                 </form>
             )}
+            {add && <button onClick={handleCancel}>Cancel</button>}
         </div>
     )
 }

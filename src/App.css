@@ -190,3 +190,17 @@ td {
 .table-data {
   font-weight: lighter;
 }
+
+button {
+  width: 100px;
+  height: 40px;
+  border-radius: 20%;
+  background-color: rgb(153, 117, 63);
+  color: white;
+  box-shadow: 1px 1px 5px;
+  margin: 5px;
+}
+
+button:active {
+  box-shadow: inset 1px 1px 5px;
+}

@@ -6,7 +6,7 @@ const Performances = (props) => {
     const { performances, admin } = props;
 
     return (
-        <div id="performances">
+        <div id={admin ? "" : "performances"}>
             {!admin && <h1>UPCOMING PERFORMANCES</h1>}
             {performances.length && (
                 <table>
