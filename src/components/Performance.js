@@ -39,14 +39,23 @@ const Performance = (props) => {
         history.push('/profile');
     }
 
+    const formatTime = (time) => {
+        time = time.split(':');
+        let letters = time[0] >= 12 ? 'PM' : 'AM';
+        if (time[0] > 12) {
+            time[0] = time[0] - 12;
+        }
+        return time.join(':') + letters;
+    }
+
     return (
         <tr>
             <td className="table-data">{performance.name}</td>
             <td className="table-data">{performance.location}</td>
             <td className="table-data">{performance.city}</td>
             <td className="table-data">{performance.state}</td>
-            <td className="table-data">{performance.date}</td>
-            <td className="table-data">{performance.time}</td>
+            <td className="table-data">{new Date(performance.date).toDateString()}</td>
+            <td className="table-data">{formatTime(performance.time)}</td>
             {admin && (
                 <div>
                     {!update && <button onClick={handleClick}>Update</button>}

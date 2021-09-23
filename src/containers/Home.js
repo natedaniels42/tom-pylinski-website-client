@@ -15,7 +15,9 @@ const Home = (props) => {
     useEffect(() => {
         if (active) {
             const timer = setTimeout( () => {
+                document.getElementById(`tom${index}`).style.backgroundColor = 'white';
                 setIndex(prev => (prev + 1) % 3);
+                document.getElementById(`tom${index}`).style.backgroundColor = 'blueviolet';
             }, 5000);
             return () => {
                 clearTimeout(timer);
