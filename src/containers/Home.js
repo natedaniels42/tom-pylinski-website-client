@@ -7,8 +7,8 @@ import '../App.css';
 
 const Home = (props) => {
     const pics = ['tom.png', 'tom2.jpeg', 'tom3.jpg'];
-
     const { performances } = props;
+
     const [active, setActive] = useState(true);
     const [index, setIndex] = useState(0)
     
