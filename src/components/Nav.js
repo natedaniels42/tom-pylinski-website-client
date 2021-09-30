@@ -1,8 +1,23 @@
-import React from 'react';
+import React, { useLayoutEffect } from 'react';
 import { HashLink as Link } from 'react-router-hash-link';
 import '../App.css';
 
 const Nav = () => {
+    useLayoutEffect(() => {
+        const resize = () => {
+            if (window.innerWidth > 800) {
+                document.getElementById('hamburger').removeAttribute('style');
+                document.getElementById('close').removeAttribute('style');
+                document.getElementById('nav-box').removeAttribute('style');
+                document.querySelector('nav').removeAttribute('style');
+            }
+        }
+        window.addEventListener('resize', resize)
+        return () => window.removeEventListener('resize', resize)
+    }, []);
+
+    
+
     const handleHamburgerClick = ({ target }) => {
         document.getElementById('hamburger').style.visibility = 'hidden';
         document.getElementById('close').style.visibility = 'visible';

@@ -226,6 +226,7 @@ button:active {
 @media screen and (max-width: 800px) {
   #banner {
     font-size: 2rem;
+    top: 50px;
   }
   
   #hamburger {
