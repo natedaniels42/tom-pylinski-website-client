@@ -168,6 +168,10 @@ audio::-webkit-media-controls-enclosure {
   top: 100px;
 }
 
+.error {
+  color: red;
+}
+
 #login-box {
   position: relative;
   top: 200px;

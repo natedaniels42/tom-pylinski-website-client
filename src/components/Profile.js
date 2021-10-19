@@ -8,7 +8,8 @@ const Profile = (props) => {
     const { performances, admin, history } = props;
     const [ add, setAdd ] = useState(false);
     const [inputs, setInputs] = useState({});
-
+    const [errors, setErrors] = useState({});
+    
     const handleClick = () => {
         setAdd(true);
     }
@@ -20,12 +21,39 @@ const Profile = (props) => {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        PerformanceModel.createPerformance(inputs)
-            .then((result) => {
-                console.log(result);
-            })
-        setAdd(false);
-        history.push('/profile');
+        let newErrors = {};
+        if (!inputs.name) {
+            newErrors.name = 'required  ';
+        }
+        if (!inputs.location) {
+            newErrors.location = 'required  ';
+        }
+        if (!inputs.city) {
+            newErrors.city = 'required  ';
+        }
+        if (!inputs.state) {
+            newErrors.state = 'required  ';
+        }
+        if (!inputs.date) {
+            newErrors.date = 'required  ';
+        }
+        if (!inputs.time) {
+            newErrors.time = 'required  ';
+        }
+        
+        if (newErrors) {
+            setErrors(newErrors);
+        } else {
+            PerformanceModel.createPerformance(inputs)
+                .then((result) => {
+                    console.log(result);
+                    setInputs({});
+                })
+            setAdd(false);
+            history.push('/profile');
+        }
+        
+
     }
 
     const handleCancel = (event) => {
@@ -34,18 +62,22 @@ const Profile = (props) => {
 
     return (
         <div id="profile">
-            <h1>This is the Profile Page</h1>
+            <h1>Performances</h1>
             {performances.length && <Performances performances={performances} admin={admin} />}
             {!performances.length && <p>No Performances Listed</p>}
             {!add && <button onClick={handleClick}>Add Performance</button>}
             {add && (
                 <form onSubmit={handleSubmit}>
+                    {errors.name && <span className="error">{errors.name}</span>}
                     <label htmlFor="name">Concert Name:</label>
                     <input name="name" value={inputs.name} onChange={handleInputChange} type="text" />
+                    {errors.location && <span className="error">{errors.location}</span>}
                     <label htmlFor="location">Location:</label>
                     <input name="location" value={inputs.location} onChange={handleInputChange} type="text" />
+                    {errors.city && <span className="error">{errors.city}</span>}
                     <label htmlFor="city">City:</label>
                     <input name="city" value={inputs.city} onChange={handleInputChange} type="text" />
+                    {errors.state && <span className="error">{errors.state}</span>}
                     <label htmlFor="state">State:</label>
                     <select name="state" onChange={handleInputChange} value={inputs.state} >
                         <option value="AL">Alabama</option>
@@ -100,8 +132,10 @@ const Profile = (props) => {
                         <option value="WI">Wisconsin</option>
                         <option value="WY">Wyoming</option>
                     </select>
+                    {errors.date && <span className="error">{errors.date}</span>}
                     <label htmlFor="date">Date:</label>
                     <input type="date" onChange={handleInputChange} name="date" />
+                    {errors.time && <span className="error">{errors.time}</span>}
                     <label htmlFor="time">Time:</label>
                     <input type="time" onChange={handleInputChange} name="time" />
                     <button type="submit">Add Performance</button>
