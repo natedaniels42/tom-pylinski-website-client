@@ -5,7 +5,7 @@ import '../App.css';
 const Nav = () => {
     useLayoutEffect(() => {
         const resize = () => {
-            if (window.innerWidth > 800) {
+            if (window.innerWidth > 850) {
                 document.getElementById('hamburger').removeAttribute('style');
                 document.getElementById('close').removeAttribute('style');
                 document.getElementById('nav-box').removeAttribute('style');

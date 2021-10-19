@@ -83,11 +83,11 @@ nav a:hover {
 }
 
 #tom0 {
-  background-color: blueviolet;
+  background-color: black;
 }
 
 .img-button:hover {
-  background-color: blueviolet;
+  background-color: black;
 }
 
 #tom0 {
@@ -223,7 +223,7 @@ button:active {
   box-shadow: inset 1px 1px 5px;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 850px) {
   #banner {
     font-size: 2rem;
     top: 50px;

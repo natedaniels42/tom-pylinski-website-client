@@ -13,9 +13,14 @@ const Home = (props) => {
     const [index, setIndex] = useState(0)
     
     useEffect(() => {
+        document.getElementById('hamburger').removeAttribute('style');
+        document.getElementById('close').removeAttribute('style');
+        document.getElementById('nav-box').removeAttribute('style');
+        document.querySelector('nav').removeAttribute('style');
+        
         if (active) {
             const timer = setTimeout( () => {
-                document.getElementById(`tom${(index + 1) % 3}`).style.backgroundColor = 'blueviolet';
+                document.getElementById(`tom${(index + 1) % 3}`).style.backgroundColor = 'black';
                 document.getElementById(`tom${index}`).style.backgroundColor = 'white';
                 setIndex(prev => (prev + 1) % 3);
             }, 5000);
@@ -31,7 +36,7 @@ const Home = (props) => {
         for (let img of imgs) {
             img.style.backgroundColor = 'white';
         }
-        event.target.style.backgroundColor = 'blueviolet';
+        event.target.style.backgroundColor = 'black';
 
         setIndex(Number(event.target.id[3]));
     } 
