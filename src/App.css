@@ -227,6 +227,10 @@ button:active {
   box-shadow: inset 1px 1px 5px;
 }
 
+.black {
+  background-color: rgb(50, 50, 50);
+}
+
 @media screen and (max-width: 850px) {
   #banner {
     font-size: 2rem;

@@ -60,7 +60,6 @@ const Profile = (props) => {
 
     return (
         <div id="profile">
-            <h1>Performances</h1>
             {performances.length && <Performances performances={performances} admin={admin} />}
             {!performances.length && <p>No Performances Listed</p>}
             {!add && <button onClick={handleClick}>Add Performance</button>}
