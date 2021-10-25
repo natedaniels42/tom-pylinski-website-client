@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Performance from './Performance';
 
 
@@ -6,8 +6,10 @@ const Performances = (props) => {
     const { performances, admin } = props;
     const [month, setMonth] = useState(new Date().getUTCMonth());
     const [year, setYear] = useState(new Date().getUTCFullYear());
-    const [currentPerformances, setCurrentPerformances] = useState(performances
-        .filter(performance => {
+    const [currentPerformances, setCurrentPerformances] = useState([]);
+
+    useEffect(() => {
+        setCurrentPerformances(performances.filter(performance => {
             const date = new Date(performance.date);
             const performanceMonth = date.getUTCMonth();
             const performanceYear = date.getUTCFullYear();
@@ -15,6 +17,7 @@ const Performances = (props) => {
             return performanceMonth === month && performanceYear === year;
         })
         .sort((a,b) => new Date(a.date) - new Date(b.date)))
+    }, [month, year]);
 
     const handleChange = ({ target }) => {
         const date = new Date(target.value);
@@ -33,7 +36,7 @@ const Performances = (props) => {
         <div id={admin ? "" : "performances"}>
             {!admin && <h1>UPCOMING PERFORMANCES</h1>}
             <label htmlFor="date">Choose month of performances:</label><br/>
-            <input type="date" name="date" onChange={handleChange}/>
+            <input type="month" name="date" onChange={handleChange}/>
             {currentPerformances.length > 0 && (
                 <table>
                     <thead>
