@@ -13,10 +13,8 @@ const App = () => {
   useEffect(() => {
     PerformanceModel.getAllPerformances()
       .then((result) => {
-        setPerformances(result
-          .filter(performance => new Date(`${performance.date} ${performance.time}`) > new Date())
-          .sort((a,b) => new Date(`${a.date} ${a.time}`) - new Date(`${b.date} ${b.time}`)))
-      })
+        setPerformances(result);
+    })
   })
 
   

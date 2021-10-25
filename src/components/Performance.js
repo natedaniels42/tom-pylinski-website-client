@@ -48,13 +48,15 @@ const Performance = (props) => {
         return time.join(':') + letters;
     }
 
+    const date = new Date(performance.date);
+
     return (
             <tr>
                 <td className="table-data">{performance.name}</td>
                 <td className="table-data">{performance.location}</td>
                 <td className="table-data">{performance.city}</td>
                 <td className="table-data">{performance.state}</td>
-                <td className="table-data">{new Date(performance.date).toDateString()}</td>
+                <td className="table-data">{`${date.getUTCMonth() + 1}/${date.getUTCDate()}/${date.getUTCFullYear()}`}</td>
                 <td className="table-data">{formatTime(performance.time)}</td>
                 {admin && (
                     <React.Fragment>

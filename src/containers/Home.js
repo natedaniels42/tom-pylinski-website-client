@@ -3,6 +3,7 @@ import Bio from '../components/Bio';
 import Audio from '../components/Audio';
 import Quote from '../components/Quote';
 import Performances from '../components/Performances';
+import Contact from '../components/Contact';
 import '../App.css';
 
 const Home = (props) => {
@@ -56,6 +57,7 @@ const Home = (props) => {
             <Audio />
             {performances.length && <Performances performances={performances} />}
             <Quote />
+            <Contact />
         </div>
     )
 }

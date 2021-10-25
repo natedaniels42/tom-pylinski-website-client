@@ -41,17 +41,15 @@ const Profile = (props) => {
             newErrors.time = 'required  ';
         }
         
-        if (newErrors) {
-            setErrors(newErrors);
-        } else {
-            PerformanceModel.createPerformance(inputs)
-                .then((result) => {
-                    console.log(result);
-                    setInputs({});
-                })
-            setAdd(false);
-            history.push('/profile');
-        }
+        
+        PerformanceModel.createPerformance(inputs)
+            .then((result) => {
+                console.log(result);
+                setInputs({});
+            })
+        setAdd(false);
+        history.push('/profile');
+    
         
 
     }
