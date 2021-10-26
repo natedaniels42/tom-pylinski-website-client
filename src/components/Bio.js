@@ -42,6 +42,7 @@ const Bio = () => {
                 of Local 24 of the American Federation of Musicians. He makes 
                 his home in Munroe Falls with his wife Janice, who is a music 
                 therapist, and their son Matthew.</p>
+            <p>Click <a href="tom-pylinski-music-resume.pdf" target="_blank">here</a> to view Tom's resume.</p>
         </div>
     )
 }

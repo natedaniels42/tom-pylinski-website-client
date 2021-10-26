@@ -259,6 +259,7 @@ h2 {
 
 .social-icon:hover {
   font-size: 3rem;
+  transition: .5s;
 }
 
 .social-text {
