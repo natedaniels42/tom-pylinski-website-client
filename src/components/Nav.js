@@ -18,23 +18,30 @@ const Nav = () => {
 
     
 
-    const handleHamburgerClick = ({ target }) => {
+    const handleHamburgerClick = () => {
         document.getElementById('hamburger').style.visibility = 'hidden';
         document.getElementById('close').style.visibility = 'visible';
         document.getElementById('nav-box').style.visibility = 'visible';
         document.querySelector('nav').style.height = '100%';
     }
 
-    const handleCloseClick = ({ target }) => {
-        document.getElementById('close').style.visibility = 'hidden';
-        document.getElementById('hamburger').style.visibility = 'visible';
-        document.getElementById('nav-box').style.visibility = 'hidden';
-        document.querySelector('nav').style.height = '50px';
+    const handleCloseClick = () => {
+        if (window.innerWidth < 850) {
+            document.getElementById('close').style.visibility = 'hidden';
+            document.getElementById('hamburger').style.visibility = 'visible';
+            document.getElementById('nav-box').style.visibility = 'hidden';
+            document.querySelector('nav').style.height = '50px';
+        }
     }
     
     return (
         <nav>
             <div id="nav-box">
+                {sessionStorage.currentUser && (
+                    <div className="nav-items" onClick={handleCloseClick}>
+                        <Link to="/profile">Profile</Link>
+                    </div>
+                )}
                 <div className="nav-items" onClick={handleCloseClick}>
                     <Link to="/#banner">Home</Link>
                 </div>
