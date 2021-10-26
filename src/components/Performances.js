@@ -40,7 +40,7 @@ const Performances = (props) => {
 
     return (
         <div id={admin ? "" : "performances"}>
-            <h1>PERFORMANCES</h1>
+            <h2>PERFORMANCES</h2>
             {active && (
                 <React.Fragment>
                     <label htmlFor="date">Choose month to View Performances:</label><br/>

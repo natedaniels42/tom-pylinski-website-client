@@ -3,7 +3,7 @@ import React from 'react';
 const Audio = () => {
     return (
         <div id="audio">
-            <h1>RECORDINGS</h1>
+            <h2>RECORDINGS</h2>
             <div className="audio-container">
                 <p>Schumann: 3 Romances</p>
                 <audio controls src="/schumann.m4a"></audio>
