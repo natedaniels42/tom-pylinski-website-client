@@ -8,6 +8,10 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  height: 100%;
+}
+
 nav {
   background-color: black;
   position: fixed;
@@ -274,6 +278,8 @@ h2 {
 #resource-container {
   position: relative;
   top: 100px;
+  height: 100%;
+  background-color:rgb(153, 117, 63);
 }
 
 @media screen and (max-width: 850px) {
