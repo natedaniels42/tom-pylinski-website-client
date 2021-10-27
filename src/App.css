@@ -280,6 +280,11 @@ h2 {
   top: 100px;
   height: 100%;
   background-color:rgb(153, 117, 63);
+  padding: 10%;
+}
+
+li {
+  list-style-type: armenian;
 }
 
 @media screen and (max-width: 850px) {
