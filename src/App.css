@@ -337,6 +337,10 @@ li {
     padding: 20px;
   }
 
+  td {
+    font-size: .7rem;
+  }
+
   #quote {
     flex-direction: column;
   }
