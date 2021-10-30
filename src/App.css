@@ -37,7 +37,7 @@ nav a {
   padding: 10px;
 }
 
-nav a:hover {
+.nav-items a:hover {
   background-color: white;
   color: black;
   opacity: 50%;
