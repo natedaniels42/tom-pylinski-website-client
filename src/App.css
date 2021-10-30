@@ -336,4 +336,12 @@ li {
   .nav-items {
     padding: 20px;
   }
+
+  #quote {
+    flex-direction: column;
+  }
+
+  #contact {
+    flex-direction: column-reverse;
+  }
 }
