@@ -1,4 +1,4 @@
-const url = 'http://localhost:4000/api/v1/performances';
+const url = 'https://tom-pylinski-website-api.herokuapp.com/api/v1/performances';
 
 class PerformanceModel {
     static getAllPerformances = () => {
