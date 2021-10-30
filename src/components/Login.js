@@ -5,7 +5,7 @@ import axios from 'axios';
 import setAuthHeader from '../utils/setAuthHeader';
 import '../App.css';
 
-const url = 'http://localhost:4000/api/v1/auth/login';
+const url = 'https://tom-pylinski-website-api.herokuapp.com/api/v1/auth/login';
 
 const Login = (props) => {
     const [email, setEmail] = useState('');
