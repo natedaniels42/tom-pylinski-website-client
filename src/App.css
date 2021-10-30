@@ -305,10 +305,6 @@ li {
 }
 
 @media screen and (max-width: 850px) {
-  main {
-    width: 100%;
-  }
-  
   #banner {
     font-size: 2rem;
     top: 50px;
@@ -325,6 +321,7 @@ li {
 
   nav {
     height: 50px;
+    max-width: 100%;
   }
 
   #nav-box {
