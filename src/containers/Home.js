@@ -19,7 +19,7 @@ const Home = (props) => {
         document.getElementById('nav-box').removeAttribute('style');
         document.querySelector('nav').removeAttribute('style');
         
-        if (active) {
+        if (active && window.innerWidth > 850) {
             const timer = setTimeout( () => {
                 document.getElementById(`tom${(index + 1) % 3}`).style.backgroundColor = 'black';
                 document.getElementById(`tom${index}`).style.backgroundColor = 'white';
