@@ -4,7 +4,7 @@ const Repertoire = () => {
     return (
         <div>
             <h2>Recommended Repertoire for Trombone</h2>
-            <h3>Unaccompanied/Accompanied Solo Works:</h3>
+            <h3 className="title">Unaccompanied/Accompanied Solo Works:</h3>
             <ul style={{listStyleImage: `url('${process.env.PUBLIC_URL}/trombone-icon-32.ico')`}}>
                 <li>Johann Albrechtsberger, Concerto for Alto Trombone & Strings</li>
                 <li>David Amram, Trombone Alone</li>
@@ -35,7 +35,7 @@ const Repertoire = () => {
                 <li>Georg Philipp Telemann, Sonata in F minor</li>
                 <li>Galliard, Marcello, and Vivaldi Sonatas</li>
             </ul>
-            <h3>Etudes and Method Books:</h3>
+            <h3 className="title">Etudes and Method Books:</h3>
             <ul style={{listStyleImage: `url('${process.env.PUBLIC_URL}/trombone-icon-32.ico')`}}>
                 <li>Arban, Method for Trombone</li>
                 <li>The Unaccompanied Bach Cello Suites</li>
@@ -58,7 +58,7 @@ const Repertoire = () => {
                 <li>Keith Brown, Orchestral Excerpts for Trombone, Books 1-10</li>
                 <li>Orchester-Probespiel for Trombone</li>
             </ul>
-            <h3>Duets:</h3>
+            <h3 className="title">Duets:</h3>
             <ul style={{listStyleImage: `url('${process.env.PUBLIC_URL}/trombone-icon-32.ico')`}}>
                 <li>Bach J.S., Two-Part Inventions</li>
                 <li>Blazhevich, Duets</li>

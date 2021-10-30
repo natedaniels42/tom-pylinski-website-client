@@ -47,7 +47,7 @@ const Performances = (props) => {
                     <input type="month" name="date" onChange={handleChange}/>
                 </React.Fragment>
             )}
-            {!active && <button className="black" onClick={handleClick}>Change Month</button>}
+            {!active && <button className={!admin ? "black" : ""} onClick={handleClick}>Change Month</button>}
             {currentPerformances.length > 0 && (
                 <table>
                     <thead>

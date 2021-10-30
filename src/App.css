@@ -6,6 +6,7 @@
 
 html {
   scroll-behavior: smooth;
+  font-family: 'Playfair Display', serif;
 }
 
 body {
@@ -251,7 +252,7 @@ button:active {
   object-fit: cover;
 }
 
-h2 {
+h1, h2, h3, a, li {
   color: white;
 }
 
@@ -284,7 +285,23 @@ h2 {
 }
 
 li {
-  list-style-type: armenian;
+  list-style-type: disc; 
+}
+
+#links {
+  padding: 5%;
+}
+
+.link {
+  padding: 2%;
+}
+
+.link:hover {
+  color: purple;
+}
+
+.title {
+  padding: 2%;
 }
 
 @media screen and (max-width: 850px) {
