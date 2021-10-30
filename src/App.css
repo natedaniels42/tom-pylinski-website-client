@@ -341,7 +341,15 @@ li {
     flex-direction: column;
   }
 
+  #quote-text {
+    width: 100%;
+  }
+
   #contact {
     flex-direction: column-reverse;
+  }
+
+  #sketch {
+    width: 100%;
   }
 }
