@@ -356,4 +356,8 @@ li {
   #sketch {
     width: 100%;
   }
+
+  #resource-container {
+    top: 50px;
+  }
 }
