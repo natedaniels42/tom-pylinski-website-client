@@ -41,7 +41,7 @@ const Bio = () => {
                 professional musicians, Tom currently serves as Vice President 
                 of Local 24 of the American Federation of Musicians. He makes 
                 his home in Munroe Falls with his wife Janice, who is a music 
-                therapist, and their son Matthew.</p>
+                therapist, and their son Matthew.</p><br /><br />
             <p>Click <a href="tom-pylinski-music-resume.pdf" target="_blank">here</a> to view Tom's resume.</p>
         </div>
     )
