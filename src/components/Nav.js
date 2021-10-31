@@ -64,7 +64,7 @@ const Nav = () => {
                     <Link to="tom-pylinski-music-resume.pdf" target="_blank">Resume</Link>
                 </div>
                 <div className="nav-items" onClick={handleCloseClick}>
-                    <Link to="/resources">Student Resources</Link>
+                    <Link to="/resources/#">Student Resources</Link>
                 </div>
             </div>
             <div id="hamburger" onClick={handleHamburgerClick} >
