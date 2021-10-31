@@ -28,6 +28,11 @@ const Links = () => {
                         University of Mount Union | Department of Performing Arts
                     </a>
                 </li>
+                <li className="link">
+                    <a href="https://www.trombone.net/" target="_blank">
+                        International Trombone Association
+                    </a>
+                </li>
             </ul>
         </div>
     )

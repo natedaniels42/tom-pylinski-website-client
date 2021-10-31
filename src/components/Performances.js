@@ -44,7 +44,7 @@ const Performances = (props) => {
             {active && (
                 <React.Fragment>
                     <label htmlFor="date">Choose month to View Performances:</label><br/>
-                    <input type="month" name="date" onChange={handleChange}/>
+                    <input type="month" name="date" className="date" onChange={handleChange}/>
                 </React.Fragment>
             )}
             {!active && <button className={!admin ? "black" : ""} onClick={handleClick}>Change Month</button>}
