@@ -337,6 +337,18 @@ li {
     padding: 20px;
   }
 
+  #tom0 {
+    left: 44%;
+  }
+  
+  #tom1 {
+    left: 48%;
+  }
+  
+  #tom2 {
+    left: 52%;
+  }
+
   audio::-webkit-media-controls-enclosure {
     width: 100%;
   }
