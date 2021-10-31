@@ -26,7 +26,7 @@ const Repertoire = () => {
                 <li>Lars-Erik Larsson, Concertino</li>
                 <li>Frank Martin, Ballade</li>
                 <li>Darius Milhaud, Concertino d’Hiver</li>
-                <li>Nicolay Rimsky-Korsakov, Trombone Concerto</li>
+                <li>Nicolai Rimsky-Korsakov, Trombone Concerto</li>
                 <li>Nino Rota, Concerto for Trombone & Orchestra</li>
                 <li>Camille Saint-Saens, The Swan</li>
                 <li>Robert Schumann, 3 Romances</li>
