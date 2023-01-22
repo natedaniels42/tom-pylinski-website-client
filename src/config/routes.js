@@ -6,7 +6,8 @@ import Profile from '../components/Profile';
 import Login from '../components/Login';
 import Resources from '../containers/Resources';
 
-export default Route = ({ performances, admin }) => (
+// eslint-disable-next-line import/no-anonymous-default-export
+export default ({ performances, admin }) => (
     <Switch>
         <Route exact path='/' render={() => <Home performances={performances} admin={admin}/> } />
         <Route path='/admin' component={Login} />
