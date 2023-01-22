@@ -29,7 +29,7 @@ const Home = (props) => {
                 clearTimeout(timer);
             }
         }
-    }, [index]);
+    }, [index, active]);
 
     const handleClick = (event) => {
         setActive(false);

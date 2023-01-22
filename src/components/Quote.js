@@ -5,7 +5,7 @@ const Quote = () => {
     return (
         <div id="quote">
             <div id="quote-image">
-                <img src="trombone-cartoon.webp" />
+                <img src="trombone-cartoon.webp" alt="Hector Berlioz"/>
             </div>
             <div id="quote-text">
                 <p>"The trombone is the true head of the family of wind instruments... 

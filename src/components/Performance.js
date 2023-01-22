@@ -9,7 +9,7 @@ const Performance = (props) => {
 
     useEffect(() => {
         setInputs(performance);
-    }, []);
+    }, [performance]);
 
     const handleClick = () => {
         setUpdate(true);

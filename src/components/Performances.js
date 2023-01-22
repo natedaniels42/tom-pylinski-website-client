@@ -18,7 +18,7 @@ const Performances = (props) => {
             return performanceMonth === month && performanceYear === year;
         })
         .sort((a,b) => new Date(a.date) - new Date(b.date)))
-    }, [month, year]);
+    }, [month, year, performances]);
 
     const handleChange = ({ target }) => {
         const date = new Date(target.value);

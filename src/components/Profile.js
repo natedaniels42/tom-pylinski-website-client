@@ -8,7 +8,7 @@ const Profile = (props) => {
     const { performances, admin, history } = props;
     const [ add, setAdd ] = useState(false);
     const [inputs, setInputs] = useState({});
-    const [errors, setErrors] = useState({});
+    const [errors] = useState({});
     
     const handleClick = () => {
         setAdd(true);

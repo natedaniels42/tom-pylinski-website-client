@@ -8,7 +8,7 @@ const Contact = () => {
                 <a href ="mailto: onethousandhours@yahoo.com" class="social-icon"><i class="fas fa-home"></i><span class="social-text">Personal Email</span></a><br/>
                 <a href ="mailto: pylinsth@mountunion.edu" class="social-icon"><i class="fas fa-briefcase"></i><span class="social-text">Work Email</span></a>
             </div>
-            <img id="sketch" src="tom-sketch.jpg" />
+            <img id="sketch" src="tom-sketch.jpg" alt="sketch of a trombone player"/>
         </div>
     )
 }

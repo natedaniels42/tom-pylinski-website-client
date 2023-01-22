@@ -8,7 +8,7 @@ import Nav from './components/Nav';
 
 const App = () => {
   const [performances, setPerformances] = useState([]);
-  const [admin, setAdmin] = useState(false);
+  const [admin] = useState(false);
 
   useEffect(() => {
     PerformanceModel.getAllPerformances()
