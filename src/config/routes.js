@@ -6,7 +6,7 @@ import Profile from '../components/Profile';
 import Login from '../components/Login';
 import Resources from '../containers/Resources';
 
-export default ({ performances, admin }) => (
+export default Route = ({ performances, admin }) => (
     <Switch>
         <Route exact path='/' render={() => <Home performances={performances} admin={admin}/> } />
         <Route path='/admin' component={Login} />
