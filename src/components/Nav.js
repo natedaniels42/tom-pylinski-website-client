@@ -61,7 +61,7 @@ const Nav = () => {
                     <Link to="/#contact">Contact Me</Link>
                 </div>
                 <div className="nav-items" onClick={handleCloseClick}>
-                    <Link to="/tom-resume.pdf" target="_blank">Resume</Link>
+                    <Link to="/tom-pylinski-resume-20250821.pdf" target="_blank">Resume</Link>
                 </div>
                 <div className="nav-items" onClick={handleCloseClick}>
                     <Link to="/resources/#">Student Resources</Link>
