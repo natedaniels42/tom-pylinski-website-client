@@ -48,7 +48,7 @@ const Bio = () => {
                 Federation of Musicians. He makes his home in Munroe Falls with
                 his wife Janice, who is a music enrichment specialist, and their son
                 Matthew.</p><br /><br />
-            <p>Click <a href="tom-pylinski-resume-20250817.pdf" target="_blank">here</a> to view Tom's resume.</p>
+            <p>Click <a href="tom-pylinski-resume-20250821.pdf" target="_blank">here</a> to view Tom's resume.</p>
         </div>
     )
 }
